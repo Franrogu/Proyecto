@@ -1,0 +1,175 @@
+.navbar-img {
+  width: 2em;
+  height: 2em;
+  padding: 0.5em 0;
+}
+
+.navbar-logo {
+  width: 10em;
+  height: 3em;
+  padding: 0.5em 0;
+}
+
+.categorias-img {
+  width: 4em;
+  height: 4em;
+}
+
+.despegar-img {
+  width: 1em;
+  height: 1em;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: white;
+}
+
+nav {
+  background-color: #a81e19;
+  display: grid;
+  position: sticky;
+  border: 0;
+  width: 100%;
+  grid-template-columns: 1fr repeat(3, 1fr) 1fr;
+}
+
+.nav-ps {
+  display: flex;
+}
+.nav-ps .menu-burger {
+  margin: 1em 1em;
+}
+.nav-ps .menu-logo {
+  margin: 1em 1em;
+}
+
+.nav-ss {
+  grid-column: 5/2;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-ss img {
+  margin: 1em 0.5em;
+}
+.nav-ss #buscador {
+  border-radius: 5%;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.nav-ts {
+  grid-column: 5/6;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-ts .registrarse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 1em;
+}
+.nav-ts .registrarse #btn-registro {
+  background-color: #a81e19;
+  border-color: #a81e19;
+  border-radius: 10%;
+  padding: 1em 1em;
+}
+.nav-ts .registrarse #btn-registro:hover {
+  background-color: #c7270b;
+  color: whitesmoke;
+  transition: all 0.3s ease-out;
+}
+.nav-ts .iniciar-sesion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 1em;
+  transition: all 0.1s ease-out;
+}
+.nav-ts .iniciar-sesion #btn-loggin {
+  background-color: #a81e19;
+  border-color: #a81e19;
+  border-radius: 10%;
+  padding: 1em 1em;
+}
+.nav-ts .iniciar-sesion #btn-loggin:hover {
+  background-color: #c7270b;
+  color: whitesmoke;
+  transition: all 0.3s ease-out;
+}
+
+.home-categorias {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-seccion1 {
+  height: 30em;
+  background-color: #f1e0e0;
+}
+
+.seccion1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.receta {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+.receta figure.imgreceta {
+  position: relative;
+  height: 150px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.receta figure.imgreceta img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+}
+.receta figure.imgreceta .hoverreceta {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 251, 0.6);
+  width: 100%;
+  height: 40%;
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+.receta figure.imgreceta:hover > .hoverreceta {
+  opacity: 1;
+  visibility: visible;
+}
+
+.home-seccion2 {
+  height: 30em;
+  background-color: #f1e0e0;
+}
+
+.seccion2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  width: 100%;
+  height: 20em;
+  background-color: #a81e19;
+}
+
+/*# sourceMappingURL=styles.css.map */
