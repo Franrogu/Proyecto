@@ -6,7 +6,7 @@
     margin: 0;
     border: 0;
 }
-body{
+html{
     background-color: $main-bg-color;
 
 }
@@ -15,7 +15,8 @@ body{
 nav{
     background-color: $main-nav-color;
     display: grid;
-    position: sticky;
+    // position: fixed;
+    z-index: 2;
     border: 0;
     width: 100%;
     grid-template-columns: 1fr repeat(3, 1fr) 1fr;
@@ -25,7 +26,29 @@ nav{
     display: flex;
 
     .menu-burger{
-        margin: 1em 1em;
+        padding: 1em 1em;
+        display: flex;
+        figure.imgmenu{
+            position: relative;
+            cursor: pointer;
+            img{
+                transition: all 500ms ease-out;
+                }
+            .hovermenu{
+                position: absolute;
+                bottom: 0;
+                background-color: $hover-menu;
+                
+                transition: all 500ms ease-out;
+                opacity: 0;
+                visibility: visible;
+                text-align: center;
+            } 
+        } figure.imgmenu:hover > .hovermenu{
+            opacity: 1;
+            visibility: visible;
+        }
+
 
     }
     .menu-logo{
@@ -105,37 +128,46 @@ nav{
 .home-categorias{
     display: flex;
     width: 100%;
+    height: 6em;
     justify-content: space-around;
     align-items: center;
 }
 
-
-//**************************SECCION1*****************************//
-.home-seccion1{
-    height: 30em;
-    background-color: $main-categoria1-color;
+.categorias{
+    display: flex;
+    flex-direction: column;
+    font-family:Verdana;
+    align-items: center;
 }
 
-.seccion1{
+
+//**************************SECCION-HOME*****************************//
+.home-seccion{
+    height: 30em;
+    background-color: $main-categoria1-color;
+    h1{
+        padding: 1em 0 2em 0;
+        text-align: center;
+        font-family: cursive;
+    }
+}
+
+//**************************SECCION-HOME*****************************//
+
+.seccion{
     display: flex;
     justify-content: space-around;
 }
 
-.receta{
-    width: 100%;
+.receta-ficha{
     display: flex;
-    height: 100vh;
-    figure.imgreceta{
+    figure{
         position: relative;
-        height: 150px;
-        width: 200px;
         overflow: hidden;
         border-radius: 6px;
         box-shadow: 0 5px 10px rgba(0,0,0,0.50);
         cursor: pointer;
         img{
-            width: 100%;
-            height: 100%;
             transition: all 500ms ease-out;
         }
         .hoverreceta{
@@ -149,7 +181,7 @@ nav{
             visibility: hidden;
             text-align: center;
         } 
-    } figure.imgreceta:hover > .hoverreceta{
+    } figure.imgreceta-ficha:hover > .hoverreceta{
         opacity: 1;
         visibility: visible;
     }
@@ -157,15 +189,6 @@ nav{
 
 
 
-//**************************SECCION2*****************************//
-.home-seccion2{
-    height: 30em;
-    background-color: $main-categoria1-color;
-}
-.seccion2{
-    display: flex;
-    justify-content: space-around;
-}
 
 
 
@@ -174,4 +197,77 @@ footer{
     width: 100%;
     height: 20em;
     background-color: $bg-color-footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redessociales{
+    display: flex;
+    justify-content: space-around;
+    margin: 1em 4em;
+}
+
+
+
+
+//**************************LOGGIN*****************************//
+.loggin{
+    margin: 1em 0 2em 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.formulario-logear{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+//**************************RECETA*****************************//
+.receta{
+    display: flex;
+    flex-direction: column;
+}
+
+.recetaintro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredientes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preparacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recetamultimedia{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.recetanombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.informacion-nutrimental{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    align-self: center;
 }

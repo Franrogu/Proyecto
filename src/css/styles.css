@@ -1,3 +1,5 @@
+/**************************VARIABLES PARA EL NAVBAR******************************/
+/**************************VARIABLES PARA EL CATEGORIAS******************************/
 .navbar-img {
   width: 2em;
   height: 2em;
@@ -20,20 +22,55 @@
   height: 1em;
 }
 
+.img-receta {
+  height: 150px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.img-footer {
+  width: 40px;
+  height: 40px;
+  padding: 1em 1.3em 0 1.3em;
+}
+
+.img-loggear {
+  width: 20em;
+  height: 10em;
+  padding: 1em 1.3em 0 1.3em;
+}
+
+.imgreceta {
+  width: 30em;
+  height: 20em;
+  padding: 1em 1.3em 0 1.3em;
+}
+
+.macronutrientes {
+  width: 5em;
+  height: 5em;
+  padding: 1em 1.3em 0 1.3em;
+}
+
+.informacion-nutrimental {
+  width: 20em;
+  height: 20em;
+}
+
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
 
-body {
+html {
   background-color: white;
 }
 
 nav {
   background-color: #a81e19;
   display: grid;
-  position: sticky;
+  z-index: 2;
   border: 0;
   width: 100%;
   grid-template-columns: 1fr repeat(3, 1fr) 1fr;
@@ -43,7 +80,28 @@ nav {
   display: flex;
 }
 .nav-ps .menu-burger {
-  margin: 1em 1em;
+  padding: 1em 1em;
+  display: flex;
+}
+.nav-ps .menu-burger figure.imgmenu {
+  position: relative;
+  cursor: pointer;
+}
+.nav-ps .menu-burger figure.imgmenu img {
+  transition: all 500ms ease-out;
+}
+.nav-ps .menu-burger figure.imgmenu .hovermenu {
+  position: absolute;
+  bottom: 0;
+  background-color: grey;
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: visible;
+  text-align: center;
+}
+.nav-ps .menu-burger figure.imgmenu:hover > .hovermenu {
+  opacity: 1;
+  visibility: visible;
 }
 .nav-ps .menu-logo {
   margin: 1em 1em;
@@ -107,40 +165,47 @@ nav {
 .home-categorias {
   display: flex;
   width: 100%;
+  height: 6em;
   justify-content: space-around;
   align-items: center;
 }
 
-.home-seccion1 {
+.categorias {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana;
+  align-items: center;
+}
+
+.home-seccion {
   height: 30em;
   background-color: #f1e0e0;
 }
+.home-seccion h1 {
+  padding: 1em 0 2em 0;
+  text-align: center;
+  font-family: cursive;
+}
 
-.seccion1 {
+.seccion {
   display: flex;
   justify-content: space-around;
 }
 
-.receta {
-  width: 100%;
+.receta-ficha {
   display: flex;
-  height: 100vh;
 }
-.receta figure.imgreceta {
+.receta-ficha figure {
   position: relative;
-  height: 150px;
-  width: 200px;
   overflow: hidden;
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-.receta figure.imgreceta img {
-  width: 100%;
-  height: 100%;
+.receta-ficha figure img {
   transition: all 500ms ease-out;
 }
-.receta figure.imgreceta .hoverreceta {
+.receta-ficha figure .hoverreceta {
   position: absolute;
   bottom: 0;
   background-color: rgba(255, 255, 251, 0.6);
@@ -151,25 +216,79 @@ nav {
   visibility: hidden;
   text-align: center;
 }
-.receta figure.imgreceta:hover > .hoverreceta {
+.receta-ficha figure.imgreceta-ficha:hover > .hoverreceta {
   opacity: 1;
   visibility: visible;
-}
-
-.home-seccion2 {
-  height: 30em;
-  background-color: #f1e0e0;
-}
-
-.seccion2 {
-  display: flex;
-  justify-content: space-around;
 }
 
 footer {
   width: 100%;
   height: 20em;
   background-color: #a81e19;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.redessociales {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 4em;
+}
+
+.loggin {
+  margin: 1em 0 2em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.formulario-logear {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.receta {
+  display: flex;
+  flex-direction: column;
+}
+
+.recetaintro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredientes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preparacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recetamultimedia {
+  display: flex;
+  flex-direction: column;
+}
+
+.recetanombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.informacion-nutrimental {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
