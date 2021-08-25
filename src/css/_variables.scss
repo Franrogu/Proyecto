@@ -1,4 +1,4 @@
-$main-bg-color: white;
+$main-bg-color: mintcream;
 $bg-color-footer: rgb(168, 30, 25);
 
 /**************************VARIABLES PARA EL NAVBAR******************************/
@@ -13,7 +13,13 @@ $hover-btn-loggin-letras:whitesmoke;
 $hover-btn-registro: rgb(199, 39, 11);
 $hover-btn-registro-letras:whitesmoke;
 
-$hover-menu: grey;
+$nav-hover-menu: #f5efef;
+$nav-menu-titulos: rgb(56, 52, 52);
+$nav-menu-letras: #009846;
+$nav-menu-letas-hover: rgb(168, 30, 25);
+$nav-menu-hover: rgb(241, 224, 224);
+$nav-menu-hover-border:#ecd0d1;
+
 
 
 
@@ -26,3 +32,9 @@ $main-categoria2-color: grey;
 
 $hover-receta: rgb(255, 255, 251, .6);
 
+
+
+/**************************VARIABLES PAGINA RECETA******************************/
+$btn-receta-agregar: #0099CC;
+$receta-bg-color: white;
+$receta-titulos-color: #009846;

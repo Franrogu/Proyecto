@@ -1,0 +1,24 @@
+// ************************PERFIL*****************************//
+
+.perfil{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.mifotoperfil{
+    grid-column: 1/2;
+    justify-self: center;
+}
+
+.mismacros{
+    grid-column: 2/4;
+}
+
+
+
+
+// ************************PERFIL OPCIONES*****************************//
+.perfilopciones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

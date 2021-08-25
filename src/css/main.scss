@@ -12,117 +12,25 @@ html{
 }
 
 //************************NAVBAR**************************//
-nav{
-    background-color: $main-nav-color;
-    display: grid;
-    // position: fixed;
-    z-index: 2;
-    border: 0;
-    width: 100%;
-    grid-template-columns: 1fr repeat(3, 1fr) 1fr;
-}
-
-.nav-ps{
-    display: flex;
-
-    .menu-burger{
-        padding: 1em 1em;
-        display: flex;
-        figure.imgmenu{
-            position: relative;
-            cursor: pointer;
-            img{
-                transition: all 500ms ease-out;
-                }
-            .hovermenu{
-                position: absolute;
-                bottom: 0;
-                background-color: $hover-menu;
-                
-                transition: all 500ms ease-out;
-                opacity: 0;
-                visibility: visible;
-                text-align: center;
-            } 
-        } figure.imgmenu:hover > .hovermenu{
-            opacity: 1;
-            visibility: visible;
-        }
+@import 'navbar';
 
 
-    }
-    .menu-logo{
-        margin: 1em 1em;
-    }
+//**************************CONTAINER BODY*****************************//
+.containerbody{
+    margin-top: 8em;
 }
 
 
-
-.nav-ss{
-    grid-column: 5/2;
-    display: flex;
-    justify-content: flex-end;
-    img{
-        margin: 1em .5em;
-    }
-    #buscador{
-        border-radius: 5%;
-        margin: 1em 0;
-        width: 100%;
+//**************************SECCION-HOME*****************************//
+.home-seccion{
+    height: 30em;
+    background-color: $main-categoria1-color;
+    h1{
+        padding: 1em 0 2em 0;
+        text-align: center;
+        font-family: cursive;
     }
 }
-
-
-
-.nav-ts{
-    grid-column: 5/6;
-    display: flex;
-    justify-content: flex-end;
-
-    .registrarse{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1em 1em;
-
-        #btn-registro{
-            background-color: $btn-registrar-color;
-            border-color: $btn-loggin-color;
-            border-radius: 10%;
-            padding: 1em 1em;
-            &:hover{
-                background-color: $hover-btn-registro;
-                color: $hover-btn-registro-letras;
-                transition: all 0.3s ease-out;
-            }
-        }
-   
-    }
-
-    .iniciar-sesion{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1em 1em;
-        transition: all 0.1s ease-out;
-
-        #btn-loggin{
-            background-color: $btn-loggin-color;
-            border-color: $btn-loggin-color;
-            border-radius: 10%;
-            padding: 1em 1em;
-            &:hover{
-                background-color: $hover-btn-loggin;
-                color:$hover-btn-loggin-letras;
-                transition: all 0.3s ease-out;
-            }
-    }
-   
-    }
-
-
-}
-
 
 //**************************CATEGORIAS*****************************//
 .home-categorias{
@@ -138,18 +46,6 @@ nav{
     flex-direction: column;
     font-family:Verdana;
     align-items: center;
-}
-
-
-//**************************SECCION-HOME*****************************//
-.home-seccion{
-    height: 30em;
-    background-color: $main-categoria1-color;
-    h1{
-        padding: 1em 0 2em 0;
-        text-align: center;
-        font-family: cursive;
-    }
 }
 
 //**************************SECCION-HOME*****************************//
@@ -193,23 +89,7 @@ nav{
 
 
 //**************************FOOTER*****************************//
-footer{
-    width: 100%;
-    height: 20em;
-    background-color: $bg-color-footer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.redessociales{
-    display: flex;
-    justify-content: space-around;
-    margin: 1em 4em;
-}
-
+@import 'footer';
 
 
 
@@ -230,44 +110,9 @@ footer{
 
 
 //**************************RECETA*****************************//
-.receta{
-    display: flex;
-    flex-direction: column;
-}
+@import 'receta';
 
-.recetaintro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.ingredientes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.preparacion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.recetamultimedia{
-    display: flex;
-    flex-direction: column;
-
-}
-
-.recetanombre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.informacion-nutrimental{
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    align-self: center;
-}
+//**************************MIPERFIL*****************************//
+@import 'miperfil'

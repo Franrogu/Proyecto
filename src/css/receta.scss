@@ -1,0 +1,198 @@
+.titulo{
+    color: $receta-titulos-color;
+}
+// ************************RECETA INTRO*****************************//
+.recetaintro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 1em 0;
+    background-color: $receta-bg-color;
+    // box-shadow: 0px 1px 5px black;
+    
+}
+
+.recetamultimedia{
+    display: grid;
+    margin: 0 0 0 7em;
+    grid-template-areas:    'nombre nombre nombre'
+                            'tiempo dificultad favoritos'
+                            'porciones precio estrellas'
+                            '. agregar .';
+    width: 100vh;
+    height: 10em;
+}
+
+.recetanombre{
+    grid-area: nombre;
+    align-self: center;
+    justify-self: center;
+}
+
+.recetatiempo{
+    grid-area: tiempo;
+    align-self: center;
+    justify-self: center;
+}
+
+.recetadificultad{
+    grid-area: dificultad;
+    align-self: center;
+    justify-self: center;
+}
+
+.recetafavoritos{
+    grid-area: favoritos;
+    align-self: center;
+    justify-self: center;
+}
+
+.recetaporciones{
+    grid-area: porciones;
+    align-self: center;
+    justify-self: center;
+}
+
+.recetaprecio{
+    grid-area: precio;
+    align-self: center;
+    justify-self: center;
+}
+
+.recetaestrellas{
+    grid-area: estrellas;
+    align-self: center;
+    justify-self: center;
+}
+
+.recetaagregar{
+    grid-area: agregar;
+    align-self: center;
+    justify-self: center;
+}
+
+.btnagregar{
+    padding: .5em .6em 0.5em 0.6em;
+    color: $btn-receta-agregar;
+    background: transparent;
+    border: 2px solid $btn-receta-agregar;
+    border-radius: 6px;
+    &:hover{
+        background-color: $btn-receta-agregar;
+        color: white;
+    }
+    
+}
+
+
+
+
+
+// ************************INGREDIENTES*****************************//
+.receta{
+    display: grid;
+    grid-template-areas: 'ingredientes ingredientes infonut';
+    background-color: $receta-bg-color;
+    // box-shadow: 0px 1px 5px black;
+    
+}
+.ingredientes{
+    grid-area: ingredientes;
+    display: flex;
+    margin: 1em 0 1em 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 0 5em;
+    ul > li{    
+            padding: .4em 0 .2em 0;
+    }
+    
+    
+}
+
+// ************************INFORMACIÓN NUTRIMENTAL*****************************//
+.informacion-nutrimental{
+    grid-area: infonut;
+    display: flex;
+    margin: 1em 0 1em 0;
+    flex-direction: column;
+    padding: 0px 0 0 5em;
+    align-self: center;
+
+    div{
+        padding: .5em 0 .5em 0;
+    }
+    
+}
+
+// ************************PREPARACION*****************************//
+.preparacion{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em 0 1em 0;
+    padding: 1em 0 2em 5em;
+    background-color:$receta-bg-color;
+    // box-shadow: 0px 1px 5px black;
+    h1{
+        padding: 0 0 1.5em 0;
+    }
+    p{
+        padding: 0 0 1em 0;
+    }
+}
+
+
+// ************************PREPARACION*****************************//
+
+.miinformacionnutrimental{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0 1em 0;
+    padding: 1em 0 2em 5em;
+    background-color:$receta-bg-color;
+    // box-shadow: 0px 1px 5px black;
+}
+
+.mismacros{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 2em 0;
+    .miscaltotales{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        p{
+            padding: 1em 0 0 0;
+        }
+    }
+    .misproteinastotales{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        p{
+            padding: 1em 0 0 0;
+        }
+    }
+    .miscarbohidratostotales{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        p{
+            padding: 1em 0 0 0;
+        }
+    }
+    .misgrasastotales{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        p{
+            padding: 1em 0 0 0;
+        }
+    }
+}
