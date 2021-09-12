@@ -1,6 +1,7 @@
 /**************************VARIABLES PARA EL NAVBAR******************************/
 /**************************VARIABLES PARA EL CATEGORIAS******************************/
 /**************************VARIABLES PAGINA RECETA******************************/
+/**************************VARIABLES LOGGIN******************************/
 .navbar-img {
   width: 2em;
   height: 2em;
@@ -8,9 +9,9 @@
 }
 
 .navbar-logo {
-  width: 10em;
-  height: 3em;
-  padding: 0.5em 0;
+  width: 5em;
+  height: 4em;
+  padding: 0;
 }
 
 .categorias-img {
@@ -37,7 +38,7 @@
 
 .img-loggear {
   width: 20em;
-  height: 10em;
+  height: 15em;
   padding: 1em 1.3em 0 1.3em;
 }
 
@@ -161,7 +162,7 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
   margin: 1em 0.5em;
 }
 .nav-ss #buscador {
-  border-radius: 5%;
+  border-radius: 20px/13px;
   margin: 2em 0;
   width: 100%;
 }
@@ -215,7 +216,8 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
   height: 30em;
   background-color: #f1e0e0;
 }
-.home-seccion h1 {
+
+.titulos-home {
   padding: 1em 0 2em 0;
   text-align: center;
   font-family: cursive;
@@ -234,6 +236,7 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
   flex-direction: column;
   font-family: Verdana;
   align-items: center;
+  cursor: pointer;
 }
 
 .seccion {
@@ -264,6 +267,27 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
   opacity: 0;
   visibility: hidden;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.receta-ficha figure .hoverreceta .hovertiempo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ecd0d1;
+}
+.receta-ficha figure .hoverreceta .hoverdificultad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.receta-ficha figure .hoverreceta .hoverprecio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .receta-ficha figure.imgreceta-ficha:hover > .hoverreceta {
   opacity: 1;
@@ -296,7 +320,18 @@ footer {
 .formulario-logear {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.logginlabel {
+  font-family: sans-serif;
+}
+
+.loggininput {
+  border: solid 1px #009846;
+  border-radius: 5%/95%;
+  width: 100%;
+  height: 1.7em;
+  margin: 0 0 1em 0;
 }
 
 .titulo {
@@ -492,6 +527,30 @@ footer {
 .perfilopciones {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.loggin {
+  margin: 1em 0 2em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.formulario-logear {
+  display: flex;
+  flex-direction: column;
+}
+
+.logginlabel {
+  font-family: sans-serif;
+}
+
+.loggininput {
+  border: solid 1px #009846;
+  border-radius: 5%/95%;
+  width: 100%;
+  height: 1.7em;
+  margin: 0 0 1em 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -25,11 +25,11 @@ html{
 .home-seccion{
     height: 30em;
     background-color: $main-categoria1-color;
-    h1{
-        padding: 1em 0 2em 0;
-        text-align: center;
-        font-family: cursive;
-    }
+}
+.titulos-home{
+    padding: 1em 0 2em 0;
+    text-align: center;
+    font-family: cursive;
 }
 
 //**************************CATEGORIAS*****************************//
@@ -46,6 +46,7 @@ html{
     flex-direction: column;
     font-family:Verdana;
     align-items: center;
+    cursor: pointer;
 }
 
 //**************************SECCION-HOME*****************************//
@@ -76,6 +77,28 @@ html{
             opacity: 0;
             visibility: hidden;
             text-align: center;
+            display: flex;
+            justify-content: space-around;
+            .hovertiempo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-right: 1px solid $nav-menu-hover-border
+
+            }
+            .hoverdificultad{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .hoverprecio{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
         } 
     } figure.imgreceta-ficha:hover > .hoverreceta{
         opacity: 1;
@@ -94,18 +117,7 @@ html{
 
 
 //**************************LOGGIN*****************************//
-.loggin{
-    margin: 1em 0 2em 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-.formulario-logear{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+@import 'loggin';
 
 
 
@@ -115,4 +127,8 @@ html{
 
 
 //**************************MIPERFIL*****************************//
-@import 'miperfil'
+@import 'miperfil';
+
+
+//**************************LOGGIN*****************************//
+@import 'loggin';
