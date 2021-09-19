@@ -78,6 +78,7 @@
   padding: 0;
   margin: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -102,6 +103,7 @@ nav ul {
 
 .nav-ps {
   display: flex;
+  align-items: center;
 }
 .nav-ps .menu-logo {
   margin: 1em 1em;
@@ -158,13 +160,43 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
   display: flex;
   justify-content: flex-end;
 }
-.nav-ss img {
-  margin: 1em 0.5em;
-}
-.nav-ss #buscador {
-  border-radius: 20px/13px;
-  margin: 2em 0;
+
+.buscadorForm {
+  display: flex;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.buscadorForm .buscadorInput {
+  border-radius: 20px/13px;
+  margin: 1em 0;
+  width: 90%;
+  height: 3em;
+}
+
+.buscadorFormHidden {
+  display: none;
+}
+
+.home-categoriasNavbar {
+  display: flex;
+  width: 100%;
+  height: 6em;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+
+.categoriasNavbar {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana;
+  align-items: center;
+  cursor: pointer;
+}
+
+.catNavbarHidden {
+  display: none;
 }
 
 .nav-ts {
@@ -223,20 +255,45 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
   font-family: cursive;
 }
 
-.home-categorias {
-  display: flex;
-  width: 100%;
-  height: 6em;
-  justify-content: space-around;
-  align-items: center;
+.tusrecomendacionescarousel {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 0 0 10px #fff, 0 5px 20px;
+  position: relative;
 }
 
-.categorias {
+.slider {
+  height: 200px;
+  width: 150%;
   display: flex;
-  flex-direction: column;
-  font-family: Verdana;
-  align-items: center;
+  margin-left: -25%;
+}
+
+.flechasCarousel {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: rgba(255, 255, 255, 0.7);
+  top: 50%;
+  font-weight: bold;
   cursor: pointer;
+  font-size: 1em;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 50%;
+}
+.flechasCarousel:hover {
+  background-color: #fff;
+}
+
+.flechaIzquierda {
+  left: 1em;
+}
+
+.flechaDerecha {
+  right: 1em;
 }
 
 .seccion {
@@ -246,6 +303,9 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
 
 .receta-ficha {
   display: flex;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
 }
 .receta-ficha figure {
   position: relative;
@@ -253,6 +313,8 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  height: 150px;
+  width: 200px;
 }
 .receta-ficha figure img {
   transition: all 500ms ease-out;
@@ -292,6 +354,22 @@ nav ul li div.navbarsubmenu ul .navmenutitulo:hover {
 .receta-ficha figure.imgreceta-ficha:hover > .hoverreceta {
   opacity: 1;
   visibility: visible;
+}
+
+.home-categorias {
+  display: flex;
+  width: 100%;
+  height: 6em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.categorias {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana;
+  align-items: center;
+  cursor: pointer;
 }
 
 footer {
@@ -358,6 +436,10 @@ footer {
   grid-area: nombre;
   align-self: center;
   justify-self: center;
+}
+
+#tituloReceta {
+  align-items: center;
 }
 
 .recetatiempo {

@@ -6,88 +6,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/styles.css">
+    <script src="./db/recetas.js"></script>
+    <script src="./src/js/clases/Receta.js"></script>
+    <script src="./src/js/clases/Recetario.js"></script>
+    
     <title>Receta</title>
 </head>
 
 <body>
     <header>
         <nav>
-           <div class="nav-ps">
-               <ul>
-                   <li><a href="#"><img src="./src/img/menu-hamburguesa.png" alt="Menu" class="navbar-img"></a>
-                       <div class="navbarsubmenu">
-                           <ul>
-                               <li class="navmenutitulo">Sugerencias</a></li>
-                               <li><a href="#">Recomendaciones</a></li>
-                               <li><a href="#">Top Recetas</a></li>
-                               <li><a href="#">Tus Recomendaciones</a></li>
-                           </ul>
-                           <ul>
-                               <li class="navmenutitulo">Ingredientes</a></li>
-                               <li><a href="#">Pollo y otras carnes</a></li>
-                               <li><a href="#">Ensalada y verduras</a></li>
-                               <li><a href="#">Pescado y Mariscos</a></li>
-                               <li><a href="#">Sopas, Guisos, Legumbres</a></li>
-                               <li><a href="#">Postres</a></li>
-                           </ul>
-                           <ul>
-                               <li class="navmenutitulo">Categorias</a></li>
-                               <li><a href="#">Desayuno</a></li>
-                               <li><a href="#">Comida</a></li>
-                               <li><a href="#">Cena</a></li>
-                               <li><a href="#">Snack</a></li>
-                           </ul>
-                       </div>
-                   </li>
-                 
-               </ul>
-               <div class="menu-logo">
-                   <a href="./index.html"><img src="./src/img/logo.png" alt="Aqui deberia ir el logo"
-                           class="navbar-logo"></a>
-               </div>
-           </div>
+            <div class="nav-ps">
+                <ul>
+                    <li><a href="#"><img src="./src/img/menu-hamburguesa.png" alt="Menu" class="navbar-img"></a>
+                        <div class="navbarsubmenu">
+                            <ul>
+                                <li class="navmenutitulo">Sugerencias</a></li>
+                                <li><a href="#">Recomendaciones</a></li>
+                                <li><a href="#">Top Recetas</a></li>
+                                <li><a href="#">Tus Recomendaciones</a></li>
+                            </ul>
+                            <ul>
+                                <li class="navmenutitulo">Ingredientes</a></li>
+                                <li><a href="#">Pollo y otras carnes</a></li>
+                                <li><a href="#">Ensalada y verduras</a></li>
+                                <li><a href="#">Pescado y Mariscos</a></li>
+                                <li><a href="#">Sopas, Guisos, Legumbres</a></li>
+                                <li><a href="#">Postres</a></li>
+                            </ul>
+                            <ul>
+                                <li class="navmenutitulo">Categorias</a></li>
+                                <li><a href="#">Desayuno</a></li>
+                                <li><a href="#">Comida</a></li>
+                                <li><a href="#">Cena</a></li>
+                                <li><a href="#">Snack</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-           <div class="nav-ss">
-               <input id="buscador" type="text" placeholder="Buscar que cocinar">
-               <img src="./src/img/lupa.png" alt="Buscar" class="navbar-img">
-           </div>
+                </ul>
+                <div class="menu-logo">
+                    <a href="./index.html"><img src="./src/img/logo.png" alt="Aqui deberia ir el logo"
+                            class="navbar-logo"></a>
+                </div>
+            </div>
 
-           <div class="nav-ts">
-               <div class="registrarse">
-                   <a href="./loggin.html"><button id="btn-registro">Registrate</button></a>
-               </div>
-               <div class="iniciar-sesion">
-                   <a href="./loggin.html"><button id="btn-loggin">Inicia Sesion</button></a>
-               </div>
+            <div class="nav-ss">
+                <!-- <section class="home-categoriasNavbar" id="catNavbar" style="visibility: hidden;">
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria1.png" alt="categoria1" class="categorias-img">
+                        Rapida
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria2.png" alt="categoria2" class="categorias-img">
+                        Facil
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria3.png" alt="categoria3" class="categorias-img">
+                        Desayuno
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria4.png" alt="categoria4" class="categorias-img">
+                        Comida
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria5.png" alt="categoria5" class="categorias-img">
+                        Cena
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/desplegar.png" alt="" class="despegar-img">
+        
+                    </div>
+                </section> -->
+                <form class="buscadorForm" id="busquedaForm" action="">
+                <input class="buscadorInput" type="text" placeholder="Buscar que cocinar">
+                <img src="./src/img/lupa.png" alt="Buscar" class="navbar-img ">
+                </form>
+                
+            </div>
+           
+
+
+            <div class="nav-ts">
+                <div class="registrarse">
+                    <a href="./loggin.html"><button id="btn-registro">Registrate</button></a>
+                </div>
+                <div class="iniciar-sesion">
+                    <a href="./loggin.html"><button id="btn-loggin">Inicia Sesion</button></a>
+                </div>
                 <div class="img-usuario">
-                   <!-- <img src="./src/img/usuairo.png" alt="Inicia Sesion" class="navbar-img"> -->
-               </div> 
-           </div>
-       </nav>
-   </header>
+                    <!-- <img src="./src/img/usuairo.png" alt="Inicia Sesion" class="navbar-img"> -->
+                </div>
+            </div>
+        </nav>
+    </header>
 
    <section class="containerbody">
         <section class="recetaintro">
             <img src="./src/img/imagenprueba.jpg" alt="imagen receta" class="imgreceta">
             <div class="recetamultimedia">
                 <div class="recetanombre">
-                    <h3 class="titulo">Pastel de canela</h3>
+                    <h3 id="tituloReceta" class="titulo">PASTEL DE CANELA</h3>
                 </div>
                 <div class="recetatiempo">
                     <img src="./src/img/reloj.png" alt="Tiempo de preparacion" class="imgrecetamultimedia">
-                    1 hora 10 mins
+                    <!-- 1 hora 10 mins -->
                 </div>
                 <div class="recetadificultad">
                     <img src="./src/img/dificultad.png" alt="Difucultad de preparación" class="imgrecetamultimedia">
-                    Facil
+                    <!-- Facil -->
                 </div>
                 <div class="recetafavoritos">
                     <img src="./src/img/favoritos.png" alt="Agrega a tus favoritos" class="imgrecetamultimedia">
-                    Añade a Fav.
+                    <!-- Añade a Fav. -->
                 </div>
                 <div class="recetaporciones">
                     <img src="./src/img/porciones.png" alt="Porciones del platillo" class="imgrecetamultimedia">
-                    4 Personas.
+                    <!-- 4 Personas. -->
                 </div>
                 <div class="recetaprecio">
                     <img src="./src/img/precio.png" alt="Costo de la receta" class="imgrecetamultimedia">
@@ -209,6 +244,7 @@
         </div>
        
     </footer>
+    <script src="./src/js/receta.js"></script>
 </body>
 
 </html>

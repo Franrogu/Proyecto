@@ -10,59 +10,91 @@
 <body>
     <header>
         <nav>
-           <div class="nav-ps">
-               <ul>
-                   <li><a href="#"><img src="./src/img/menu-hamburguesa.png" alt="Menu" class="navbar-img"></a>
-                       <div class="navbarsubmenu">
-                           <ul>
-                               <li class="navmenutitulo">Sugerencias</a></li>
-                               <li><a href="#">Recomendaciones</a></li>
-                               <li><a href="#">Top Recetas</a></li>
-                               <li><a href="#">Tus Recomendaciones</a></li>
-                           </ul>
-                           <ul>
-                               <li class="navmenutitulo">Ingredientes</a></li>
-                               <li><a href="#">Pollo y otras carnes</a></li>
-                               <li><a href="#">Ensalada y verduras</a></li>
-                               <li><a href="#">Pescado y Mariscos</a></li>
-                               <li><a href="#">Sopas, Guisos, Legumbres</a></li>
-                               <li><a href="#">Postres</a></li>
-                           </ul>
-                           <ul>
-                               <li class="navmenutitulo">Categorias</a></li>
-                               <li><a href="#">Desayuno</a></li>
-                               <li><a href="#">Comida</a></li>
-                               <li><a href="#">Cena</a></li>
-                               <li><a href="#">Snack</a></li>
-                           </ul>
-                       </div>
-                   </li>
-                 
-               </ul>
-               <div class="menu-logo">
-                   <a href="./index.html"><img src="./src/img/logo.png" alt="Aqui deberia ir el logo"
-                           class="navbar-logo"></a>
-               </div>
-           </div>
+            <div class="nav-ps">
+                <ul>
+                    <li><a href="#"><img src="./src/img/menu-hamburguesa.png" alt="Menu" class="navbar-img"></a>
+                        <div class="navbarsubmenu">
+                            <ul>
+                                <li class="navmenutitulo">Sugerencias</a></li>
+                                <li><a href="#">Recomendaciones</a></li>
+                                <li><a href="#">Top Recetas</a></li>
+                                <li><a href="#">Tus Recomendaciones</a></li>
+                            </ul>
+                            <ul>
+                                <li class="navmenutitulo">Ingredientes</a></li>
+                                <li><a href="#">Pollo y otras carnes</a></li>
+                                <li><a href="#">Ensalada y verduras</a></li>
+                                <li><a href="#">Pescado y Mariscos</a></li>
+                                <li><a href="#">Sopas, Guisos, Legumbres</a></li>
+                                <li><a href="#">Postres</a></li>
+                            </ul>
+                            <ul>
+                                <li class="navmenutitulo">Categorias</a></li>
+                                <li><a href="#">Desayuno</a></li>
+                                <li><a href="#">Comida</a></li>
+                                <li><a href="#">Cena</a></li>
+                                <li><a href="#">Snack</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-           <div class="nav-ss">
-               <input id="buscador" type="text" placeholder="Buscar que cocinar">
-               <img src="./src/img/lupa.png" alt="Buscar" class="navbar-img">
-           </div>
+                </ul>
+                <div class="menu-logo">
+                    <a href="./index.html"><img src="./src/img/logo.png" alt="Aqui deberia ir el logo"
+                            class="navbar-logo"></a>
+                </div>
+            </div>
 
-           <div class="nav-ts">
-               <div class="registrarse">
-                   <a href="./loggin.html"><button id="btn-registro">Registrate</button></a>
-               </div>
-               <div class="iniciar-sesion">
-                   <a href="./loggin.html"><button id="btn-loggin">Inicia Sesion</button></a>
-               </div>
+            <div class="nav-ss">
+                <section class="home-categoriasNavbar catNavbarHidden" id="catNavbar" >
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria1.png" alt="categoria1" class="categorias-img">
+                        Rapida
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria2.png" alt="categoria2" class="categorias-img">
+                        Facil
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria3.png" alt="categoria3" class="categorias-img">
+                        Desayuno
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria4.png" alt="categoria4" class="categorias-img">
+                        Comida
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria5.png" alt="categoria5" class="categorias-img">
+                        Cena
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/desplegar.png" alt="" class="despegar-img">
+        
+                    </div>
+                </section>
+                <form class="buscadorForm " id="busquedaForm" action="">
+                <input class="buscadorInput" id="inputBuscador" type="text" placeholder="Buscar que cocinar">
+                <img src="./src/img/lupa.png" alt="Buscar" class="navbar-img" id="btnBuscador">
+                </form>
+                
+            </div>
+           
+
+
+            <div class="nav-ts">
+                <div class="registrarse">
+                    <a href="./loggin.html"><button id="btn-registro">Registrate</button></a>
+                </div>
+                <div class="iniciar-sesion">
+                    <a href="./loggin.html"><button id="btn-loggin">Inicia Sesion</button></a>
+                </div>
                 <div class="img-usuario">
-                   <!-- <img src="./src/img/usuairo.png" alt="Inicia Sesion" class="navbar-img"> -->
-               </div> 
-           </div>
-       </nav>
-   </header>
+                    <!-- <img src="./src/img/usuairo.png" alt="Inicia Sesion" class="navbar-img"> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
 
    <section class="containerbody">
     <section class="loggin">

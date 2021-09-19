@@ -26,6 +26,7 @@ nav{
 //************************PRIMERA SECCION**************************//
 .nav-ps{
     display: flex; 
+    align-items: center;
     .menu-logo{
         margin: 1em 1em;
     }
@@ -85,15 +86,50 @@ nav ul li div.navbarsubmenu{
     grid-column: 5/2;
     display: flex;
     justify-content: flex-end;
-    img{
-        margin: 1em .5em;
-    }
-    #buscador{
+   
+}
+.buscadorForm{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .buscadorInput{
         border-radius: 20px/13px;
-        margin: 2em 0;
-        width: 100%;
+        margin: 1em 0;
+        width: 90%;
+        height: 3em;
     }
 }
+
+.buscadorFormHidden{ 
+    display: none;
+}
+
+
+.home-categoriasNavbar{
+    display: flex;
+    width: 100%;
+    height: 6em;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s ease-out;
+}
+
+.categoriasNavbar{
+    display: flex;
+    flex-direction: column;
+    font-family:Verdana;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+
+.catNavbarHidden{
+    display: none;
+}
+
+
 
 
 //************************TERCERA SECCION**************************//

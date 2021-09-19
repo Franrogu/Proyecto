@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/styles.css">
+    <script src="./db/recetas.js"></script>
+    <script src="./src/js/clases/Receta.js"></script>
+    <script src="./src/js/clases/Recetario.js"></script>
+    <script src="./src/js/navbarCategories.js"></script>
     <title>Recetario</title>
 </head>
 
@@ -48,9 +52,40 @@
             </div>
 
             <div class="nav-ss">
-                <input id="buscador" type="text" placeholder="Buscar que cocinar">
-                <img src="./src/img/lupa.png" alt="Buscar" class="navbar-img">
+                <section class="home-categoriasNavbar catNavbarHidden" id="catNavbar" >
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria1.png" alt="categoria1" class="categorias-img">
+                        Rapida
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria2.png" alt="categoria2" class="categorias-img">
+                        Facil
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria3.png" alt="categoria3" class="categorias-img">
+                        Desayuno
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria4.png" alt="categoria4" class="categorias-img">
+                        Comida
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/categoria5.png" alt="categoria5" class="categorias-img">
+                        Cena
+                    </div>
+                    <div class="categoriasNavbar">
+                        <img src="./src/img/desplegar.png" alt="" class="despegar-img">
+        
+                    </div>
+                </section>
+                <form class="buscadorForm " id="busquedaForm" action="">
+                <input class="buscadorInput" id="inputBuscador" type="text" placeholder="Buscar que cocinar">
+                <img src="./src/img/lupa.png" alt="Buscar" class="navbar-img" id="btnBuscador">
+                </form>
+                
             </div>
+           
+
 
             <div class="nav-ts">
                 <div class="registrarse">
@@ -67,13 +102,13 @@
     </header>
 
     <section class="containerbody">
+        <h1 class="titulos-home">Tus Recomendaciones</h1>
 
         <section class="tusrecomendacionescarousel">
-            <h1 class="titulos-home">Tus Recomendaciones</h1>
-            <section class="seccion">
-                <div class="receta-ficha">
+            <div class="slider" id="slider">
+                <div class="receta-ficha sliderFicha">
                     <figure class="imgreceta-ficha">
-                        <a href="./receta.html"><img src="./src/img/imagenprueba.jpg" alt="" class="img-receta"></a>
+                        <a href="./receta.html"><img src="./src/img/receta1.jpg" alt="" class="img-receta"></a>
 
                         <div class="hoverreceta">
                             <div class="hovertiempo">
@@ -92,9 +127,9 @@
                         </div>
                     </figure>
                 </div>
-                <div class="receta-ficha">
+                <div class="receta-ficha sliderFicha">
                     <figure class="imgreceta-ficha">
-                        <a href="./receta.html"><img src="./src/img/imagenprueba.jpg" alt="" class="img-receta"></a>
+                        <a href="./receta.html"><img src="./src/img/receta2.jpg" alt="" class="img-receta"></a>
 
                         <div class="hoverreceta">
                             <div class="hovertiempo">
@@ -113,9 +148,9 @@
                         </div>
                     </figure>
                 </div>
-                <div class="receta-ficha">
+                <div class="receta-ficha sliderFicha">
                     <figure class="imgreceta-ficha">
-                        <a href="./receta.html"><img src="./src/img/imagenprueba.jpg" alt="" class="img-receta"></a>
+                        <a href="./receta.html"><img src="./src/img/receta3.jpg" alt="" class="img-receta"></a>
 
                         <div class="hoverreceta">
                             <div class="hovertiempo">
@@ -134,9 +169,9 @@
                         </div>
                     </figure>
                 </div>
-                <div class="receta-ficha">
+                <div class="receta-ficha sliderFicha">
                     <figure class="imgreceta-ficha">
-                        <a href="./receta.html"><img src="./src/img/imagenprueba.jpg" alt="" class="img-receta"></a>
+                        <a href="./receta.html"><img src="./src/img/receta4.jpg" alt="" class="img-receta"></a>
 
                         <div class="hoverreceta">
                             <div class="hovertiempo">
@@ -155,8 +190,58 @@
                         </div>
                     </figure>
                 </div>
-                
-            </section>
+                <div class="receta-ficha sliderFicha">
+                    <figure class="imgreceta-ficha">
+                        <a href="./receta.html"><img src="./src/img/receta5.jpg" alt="" class="img-receta"></a>
+
+                        <div class="hoverreceta">
+                            <div class="hovertiempo">
+                                <img class="imgrecetamultimedia" src="./src/img/reloj.png" alt="Tiempo">
+                                75 mins
+                            </div>
+                            <div class="hoverdificultad">
+                                <img src="./src/img/dificultad.png" alt="Dificultad" class="imgrecetamultimedia">
+                                Facil
+                            </div>
+                            <div class="hoverprecio">
+                                <img src="./src/img/precio.png" alt="Precio" class="imgrecetamultimedia">
+                                Economico
+
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="receta-ficha sliderFicha">
+                    <figure class="imgreceta-ficha">
+                        <a href="./receta.html"><img src="./src/img/receta6.jpg" alt="" class="img-receta"></a>
+
+                        <div class="hoverreceta">
+                            <div class="hovertiempo">
+                                <img class="imgrecetamultimedia" src="./src/img/reloj.png" alt="Tiempo">
+                                75 mins
+                            </div>
+                            <div class="hoverdificultad">
+                                <img src="./src/img/dificultad.png" alt="Dificultad" class="imgrecetamultimedia">
+                                Facil
+                            </div>
+                            <div class="hoverprecio">
+                                <img src="./src/img/precio.png" alt="Precio" class="imgrecetamultimedia">
+                                Economico
+
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="btnIzquierda" class="flechasCarousel flechaIzquierda">
+                <i><</i>
+            </div>       
+            <div id="btnDerecha" class="flechasCarousel flechaDerecha">
+                <i>></i>
+            </div>   
+
+            <script src="./src/js/carousel.js"></script> 
         </section>
 
         <section class="toprecetashome">
@@ -228,26 +313,26 @@
             </section>
         </section>
 
-        <section class="home-categorias">
-            <div class="categorias">
-                <img src="./src/img/categoria1.png" alt="categoria1" class="categorias-img">
-                Rapida
+        <section class="home-categorias" id="homeCategorias">
+            <div class="categorias" id="categorias">
+                <img src="./src/img/categoria1.png" alt="categoria1" class="categorias-img rapida">
+                <p> Rapida</p>
             </div>
             <div class="categorias">
-                <img src="./src/img/categoria2.png" alt="categoria2" class="categorias-img">
-                Facil
+                <img src="./src/img/categoria2.png" alt="categoria2" class="categorias-img facil">
+                <p class="btnCat"> Facil</p>
             </div>
             <div class="categorias">
-                <img src="./src/img/categoria3.png" alt="categoria3" class="categorias-img">
-                Desayuno
+                <img src="./src/img/categoria3.png" alt="categoria3" class="categorias-img desayuno">
+                <p class="btnCat"> Desayuno</p>
             </div>
             <div class="categorias">
-                <img src="./src/img/categoria4.png" alt="categoria4" class="categorias-img">
-                Comida
+                <img src="./src/img/categoria4.png" alt="categoria4" class="categorias-img comida">
+                <p class="btnCat"> Comida</p>
             </div>
-            <div class="categorias">
-                <img src="./src/img/categoria5.png" alt="categoria5" class="categorias-img">
-                Cena
+            <div class="categorias ">
+                <img src="./src/img/categoria5.png" alt="categoria5" class="categorias-img cena">
+                <p class="btnCat"> Cena</p>
             </div>
             <div class="categorias">
                 <img src="./src/img/desplegar.png" alt="" class="despegar-img">
@@ -256,59 +341,37 @@
         </section>
 
         <section class="home-seccion">
-            <h1 class="titulos-home">Rapidas</h1>
+            <h1 class="titulos-home" id="seccionFiltrado"></h1>
             <section class="seccion">
                 <div class="receta-ficha">
                     <figure class="imgreceta-ficha">
                         <a href="./receta.html"><img src="./src/img/imagenprueba.jpg" alt="" class="img-receta"></a>
 
                         <div class="hoverreceta">
-                            Tiempo: 15 min
-                        </div>
-                    </figure>
-                </div>
-                <div class="receta-ficha">
-                    <figure class="imgreceta-ficha">
-                        <img src="./src/img/imagenprueba.jpg" alt="" class="img-receta">
+                            <div class="hovertiempo">
+                                <img class="imgrecetamultimedia" src="./src/img/reloj.png" alt="Tiempo">
+                                75 mins
+                            </div>
+                            <div class="hoverdificultad">
+                                <img src="./src/img/dificultad.png" alt="Dificultad" class="imgrecetamultimedia">
+                                Facil
+                            </div>
+                            <div class="hoverprecio">
+                                <img src="./src/img/precio.png" alt="Precio" class="imgrecetamultimedia">
+                                Economico
 
-                        <div class="hoverreceta">
-                            Tiempo: 15 min
+                            </div>
                         </div>
                     </figure>
                 </div>
-                <div class="receta-ficha">
-                    <figure class="imgreceta-ficha">
-                        <img src="./src/img/imagenprueba.jpg" alt="" class="img-receta">
-
-                        <div class="hoverreceta">
-                            Tiempo: 15 min
-                        </div>
-                    </figure>
-                </div>
-                <div class="receta-ficha">
-                    <figure class="imgreceta-ficha">
-                        <img src="./src/img/imagenprueba.jpg" alt="" class="img-receta">
-
-                        <div class="hoverreceta">
-                            Tiempo: 15 min
-                        </div>
-                    </figure>
-                </div>
-                <div class="receta-ficha">
-                    <figure class="imgreceta-ficha">
-                        <img src="./src/img/imagenprueba.jpg" alt="" class="img-receta">
-
-                        <div class="hoverreceta">
-                            Tiempo: 15 min
-                        </div>
-                    </figure>
-                </div>
+               
 
             </section>
         </section>
-        <br><br><br><br>
+        
 
     </section>
+    <script src="./src/js/main.js"></script>
 </body>
 <footer>
     <div class="logofooter">
